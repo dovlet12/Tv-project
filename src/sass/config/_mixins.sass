@@ -6,6 +6,11 @@
 		font-style: $style
 		src: url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff')
 
+=flex_center($display, $x-propertie, $y-propertie)
+  display: $display
+  align-items: $x-propertie
+  justify-content: $y-propertie
+
 // Horizontal gradient - from left to right
 =gradient_x($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%)
 	background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent)

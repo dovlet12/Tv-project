@@ -1,3 +1,130 @@
 .footer
-	padding: 16px 0
-	background: #eee
+  background: $c2
+  padding: 81px
+  &__block
+    display: flex
+    // justify-content: center
+    gap: 96px
+    // align-items: center
+
+  &__left-title-wrap
+    margin-bottom: 48px
+    span
+      color: $c3
+      font-family: $deff
+      font-size: 14px
+      font-weight: 500
+      line-height: 24px
+      text-align: left
+    h2
+      color: $c3
+      font-family: Forum
+      font-size: 48px
+      font-weight: 400
+      line-height: 48px
+      text-transform: uppercase
+      text-align: left
+  &__left-input-wrap
+    display: flex
+    gap: 24px
+    align-items: center
+    margin-bottom: 24px
+    input
+      padding: 12px 10px
+      color: $c3
+      border: none
+      background-color: $c2
+      width: 420px
+      font-family: $deff
+      font-size: 16px
+      font-weight: 500
+      line-height: 24px
+      text-align: left
+      &::after
+        content: ' '
+        height: 1px
+        background-color: $c3
+        width: 100%
+  &__comment-wrap
+    textarea
+      background-color: $c2
+      border: none
+      resize: none
+      font-family: $deff
+      font-size: 16px
+      font-weight: 500
+      line-height: 24px
+      text-align: left
+      color: $c3
+      &::after
+        content: ' '
+        height: 1px
+        background-color: $c3
+        width: 100%
+
+  &__right-title-wrap
+    display: flex
+    justify-content: center
+    flex-direction: column
+    margin-bottom: 48px
+    span
+      color: $c3
+      font-family: $deff
+      font-size: 14px
+      font-weight: 500
+      line-height: 24px
+      text-align: center
+    h2
+      max-width: 768px
+      width: 100%
+      color: $c3
+      font-family: Forum
+      font-size: 48px
+      font-weight: 400
+      line-height: 48px
+      text-transform: uppercase
+      text-align: center  
+  &__right-btn-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 24px
+    margin-bottom: 132px  
+  
+  &__btn
+    background-color: $c3
+    max-width: 240px
+    width: 100%
+    padding: 6px
+    border-radius: 18px
+    font-family: $deff
+    font-size: 14px
+    font-weight: 500
+    line-height: 24px
+    text-align: center
+    transition: all 0.5s ease
+    &:hover
+      border: 1px solid $c3
+      color: white
+      background-color: $c0
+
+  &__icons
+    display: flex
+    justify-content: space-between
+
+  &__icon-links
+    display: flex
+    align-items: center
+    gap: 24px
+
+  &__about-hikari
+    display: flex
+    gap: 48px
+    span
+      color: gray
+      font-family: Raleway
+      font-size: 14px
+      font-weight: 500
+      line-height: 24px
+      text-align: right
+
