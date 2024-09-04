@@ -25,6 +25,7 @@
       text-transform: uppercase
       text-align: left
   &__left-input-wrap
+    position: relative
     display: flex
     gap: 24px
     align-items: center
@@ -33,6 +34,7 @@
       padding: 12px 10px
       color: $c3
       border: none
+      border-bottom: 1px solid gray
       background-color: $c2
       width: 420px
       font-family: $deff
@@ -40,15 +42,13 @@
       font-weight: 500
       line-height: 24px
       text-align: left
-      &::after
-        content: ' '
-        height: 1px
-        background-color: $c3
-        width: 100%
+
   &__comment-wrap
+    margin-bottom: 30px
     textarea
       background-color: $c2
       border: none
+      border-bottom: 1px solid gray
       resize: none
       font-family: $deff
       font-size: 16px
@@ -56,11 +56,80 @@
       line-height: 24px
       text-align: left
       color: $c3
-      &::after
-        content: ' '
-        height: 1px
-        background-color: $c3
-        width: 100%
+  &__btn-checkbox-wrap
+    display: flex
+    gap: 50px
+
+  &__send-btn
+    padding: 6px 24px
+    border-radius: 18px
+    background-color: $c3
+    border-radius: 18px
+    font-family: $deff
+    font-size: 14px
+    font-weight: 500
+    line-height: 24px
+    text-align: center
+    transition: all 0.5s ease
+    border: 1px solid transparent
+    &:hover
+      border-color: $c3
+      color: white
+      background-color: $c0
+
+  &__checkbox-wrap
+    display: flex
+    align-items: center
+    h4
+      color: $c3
+      font-family: $deff
+      font-size: 14px
+      font-weight: 500
+      line-height: 24px
+      text-align: left
+    label
+      display: flex
+      align-items: center
+      gap: 12px
+
+  &__real-checkbox
+    width: 10px
+    display: none
+
+  &__custom-checkbox
+    position: relative
+    display: inline-block
+    width: 20px
+    height: 20px
+    background-color: $c3
+    border: 2px solid white
+    margin-right: 12px
+    vertical-align: top
+    &::before
+      content: " "
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      display: inline-block
+      width: 12px
+      height: 12px
+      background-color: black
+      display: none
+
+  &__real-checkbox:checked + .footer__custom-checkbox::before
+    display: block
+
+
+
+  &__chekcbox-link
+      color: gray
+      font-family: $deff
+      font-size: 14px
+      font-weight: 500
+      line-height: 24px
+      text-align: left
+
 
   &__right-title-wrap
     display: flex
@@ -89,7 +158,7 @@
     justify-content: center
     align-items: center
     gap: 24px
-    margin-bottom: 132px  
+    margin-bottom: 152px  
   
   &__btn
     background-color: $c3
@@ -103,8 +172,9 @@
     line-height: 24px
     text-align: center
     transition: all 0.5s ease
+    border: 1px solid transparent
     &:hover
-      border: 1px solid $c3
+      border-color: $c3
       color: white
       background-color: $c0
 
