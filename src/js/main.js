@@ -51,7 +51,7 @@ $('.js-popup').on('click', function (event) {
 });
 
 // Mobile menu toggle
-$('.js-menu').on('click',function () {
+$('.js-menu').on('click', function () {
   $(this).toggleClass('is-active');
   $('.menu').toggleClass('is-opened');
 });
@@ -60,10 +60,11 @@ $('.js-menu').on('click',function () {
 $('input[type="tel"]').inputmask({
   mask: '+7 (999) 999-99-99',
   showMaskOnHover: false,
+  autoUnmask: true,
 });
 
 // E-mail Ajax Send
-$('form').on('submit',function (e) {
+$('form').on('submit', function (e) {
   e.preventDefault();
 
   let form = $(this);
@@ -137,3 +138,15 @@ const mfpPopup = function (popupID, source) {
     // }
   });
 };
+const swiper = new Swiper('.swiper', {
+  speed: 400,
+  spaceBetween: 100,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+  effect: 'fade',
+  autoplay: {
+    delay: 5000,
+  },
+});

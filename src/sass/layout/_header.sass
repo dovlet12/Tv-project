@@ -10,6 +10,8 @@
   &__list
     display: flex
     gap: 96px
+    +md
+      display: none
     a
       color: white
       font-family: $deff
@@ -20,3 +22,27 @@
       text-align: center
       text-decoration: none
       text-transform: uppercase
+
+  &__lang-wrap
+    display: flex
+    align-items: center
+    gap: 24px
+    +md
+      display: none
+    a
+      &:focus
+        color: $c3
+      text-decoration: none
+      color: $c4
+      font-family: $deff
+      font-size: 14px
+      font-weight: 500
+      line-height: 24px
+      text-align: left
+
+.hamburger 
+  display: none
+  
+  +md
+    background-color: gray
+    display: block

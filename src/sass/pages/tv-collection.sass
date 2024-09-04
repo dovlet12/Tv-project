@@ -2,6 +2,9 @@
   background-color: $c2
   &__block
     display: flex
+    justify-content: center
+    +lg
+      flex-direction: column
 
   &__img-wrap
     margin-bottom: 24px
@@ -18,6 +21,8 @@
       line-height: 32px
       text-align: center
       text-transform: uppercase
+      +md
+        font-size: 28px
     p
       max-width: 768px
       width: 100%
@@ -50,6 +55,8 @@
       text-align: center
       margin-bottom: 28px
       text-transform: uppercase
+      +md
+        font-size: 30px
 
 
 

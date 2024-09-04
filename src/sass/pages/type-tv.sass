@@ -21,12 +21,18 @@
       line-height: 48px
       text-align: center
       margin-bottom: 48px
+      +md
+        font-size: 30px
+        line-height: 35px
 
   &__img-block
     display: flex
     justify-content: center
     align-items: center
     margin-bottom: 24px
+    +lg
+      flex-direction: column
+      gap: 20px
 
   &__txt-block
     display: flex
@@ -86,6 +92,9 @@
     display: flex
     justify-content: center
     margin-bottom: 24px
+    +md
+      flex-direction: column
+      gap: 20px
   &__btn-wrapper
     padding-bottom: 48px
     display: flex
