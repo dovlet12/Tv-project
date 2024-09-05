@@ -1,17 +1,33 @@
 .footer
   background: $c2
   padding: 81px
+  +lg
+    padding: 60px
+  +md
+    padding: 40px
+  +sm
+    padding: 20px
   &__block
     display: flex
     justify-content: center
     gap: 96px
     align-items: center
-    +lg
+    +xxl
       justify-content: center
       flex-direction: column
+    +md
+      gap: 50px
+    +sm
+      gap: 30px
 
   &__left-title-wrap
     margin-bottom: 48px
+    +md
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+
     span
       color: $c3
       font-family: $deff
@@ -27,6 +43,11 @@
       line-height: 48px
       text-transform: uppercase
       text-align: left
+      +md
+        font-size: 38px
+      +sm
+        font-size: 32px
+      
   &__left-input-wrap
     position: relative
     display: flex
@@ -47,6 +68,10 @@
       font-weight: 500
       line-height: 24px
       text-align: left
+      +md
+        width: 320px
+      +sm
+        width: 300px
 
   &__comment-wrap
     margin-bottom: 30px
@@ -155,6 +180,8 @@
     justify-content: center
     flex-direction: column
     margin-bottom: 48px
+    +md
+      margin-bottom: 20px
     span
       color: $c3
       font-family: $deff
@@ -163,8 +190,8 @@
       line-height: 24px
       text-align: center
     h2
-      max-width: 768px
-      width: 100%
+      // max-width: 768px
+      // width: 100%
       color: $c3
       font-family: Forum
       font-size: 48px
@@ -172,12 +199,21 @@
       line-height: 48px
       text-transform: uppercase
       text-align: center  
+      +md
+        font-size: 38px
+        max-width: 1900px
+      +sm
+        line-height: 30px
+        font-size: 28px
   &__right-btn-wrap
     display: flex
     justify-content: center
     align-items: center
     gap: 24px
     margin-bottom: 152px  
+    +md
+      margin-bottom: 50px
+      flex-direction: column
   
   &__btn
     background-color: $c3
@@ -192,6 +228,9 @@
     text-align: center
     transition: all 0.5s ease
     border: 1px solid transparent
+    +md
+      max-width: 190px
+      width: 100%
     &:hover
       border-color: $c3
       color: white
@@ -199,7 +238,11 @@
 
   &__icons
     display: flex
+    align-items: center
     justify-content: space-between
+    +md
+      gap: 20px
+      flex-direction: column
 
   &__icon-links
     display: flex
@@ -209,6 +252,11 @@
   &__about-hikari
     display: flex
     gap: 48px
+    +md
+      gap: 10px
+      flex-direction: column
+      justify-content: center
+      align-items: center
     span
       color: gray
       font-family: Raleway

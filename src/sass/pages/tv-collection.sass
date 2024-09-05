@@ -3,7 +3,9 @@
   &__block
     display: flex
     justify-content: center
-    +lg
+    +xxl
+      justify-content: center
+      align-items: center
       flex-direction: column
 
   &__img-wrap
@@ -39,6 +41,16 @@
     justify-content: center
     align-items: center
     padding-bottom: 96px
+    +lg
+      padding-bottom: 50px
+    +md
+      padding-bottom: 30px
+    +sm
+      padding-bottom: 20px
+    img
+      +md
+        width: 290px
+        height: 150px
     span
       color: $c3
       font-family: $deff
