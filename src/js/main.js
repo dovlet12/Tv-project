@@ -52,7 +52,7 @@ $('.js-popup').on('click', function (event) {
 
 // Mobile menu toggle
 $('.js-menu').on('click', function () {
-  $(this).toggleClass('is-active');
+  $('[data-target="hamburger"]').toggleClass('is-active');
   $('.menu').toggleClass('is-opened');
 });
 
@@ -150,3 +150,7 @@ const swiper = new Swiper('.swiper', {
     delay: 5000,
   },
 });
+
+// $('.hamburger').on('click', function () {
+//   $(this).toggleClass('is-active');
+// });

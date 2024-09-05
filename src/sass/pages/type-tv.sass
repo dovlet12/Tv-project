@@ -31,9 +31,7 @@
     align-items: center
     margin-bottom: 24px
     +xxl
-      min-width: 1000px
-      overflow-x: auto
-      // flex-direction: column
+      flex-wrap: wrap
       gap: 20px
 
 
@@ -101,15 +99,18 @@
     justify-content: center
     margin-bottom: 24px
     gap: 1px
-    +xxl
-      min-width: 1814px
-      overflow-x: auto
+    +xxxl
+      flex-wrap: wrap
   &__txt-img-wrap
     max-width: 480px
     width: 100%
     display: flex
     align-items: center
     background-color: $c3
+    img
+      width: 240px
+      +lg
+        width: 208px
 
   &__txt
     padding-left: 20px
@@ -125,6 +126,9 @@
       text-transform: uppercase
       +lg
         font-size: 28px
+      +sm
+        text-align: center
+        font-size: 24px
 
 
     span
@@ -133,6 +137,8 @@
       font-weight: 500
       line-height: 24px
       text-align: left
+      +sm
+        text-align: center
 
 
 

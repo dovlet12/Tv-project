@@ -1,27 +1,24 @@
 .header
   padding: 24px 20px
   background-color: $c2
+  &__logo
+    font-family: $Form
+    font-size: 32px
+    font-weight: 400
+    line-height: 24px
+    text-align: center
+    text-decoration: none
+    color: $c3
+    &:hover
+      color: $c3
 
   &__block
     display: flex
     align-items: center
     justify-content: space-between
-
-  &__list
-    display: flex
-    gap: 96px
-    +md
+    +lg
       display: none
-    a
-      color: white
-      font-family: $deff
-      font-size: 14px
-      font-weight: 500
-      line-height: 24px
-      letter-spacing: 0%
-      text-align: center
-      text-decoration: none
-      text-transform: uppercase
+  
 
   &__lang-wrap
     display: flex
@@ -39,10 +36,20 @@
       font-weight: 500
       line-height: 24px
       text-align: left
+ul
+  display: flex
+  gap: 96px
+  a
+    color: $c3
+    text-decoration: none
+    font-family: $deff
+    font-size: 14px
+    font-weight: 500
+    line-height: 24px
+    text-align: center
+    &:hover
+      color: $c3
 
-.hamburger 
-  display: none
+
+
   
-  +md
-    background-color: gray
-    display: block
