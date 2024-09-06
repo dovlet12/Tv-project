@@ -1,5 +1,7 @@
 // RESPONSIVE
 
+// import scrollToElement = require("scroll-to-element");
+
 // Breakpoints
 const breakpoints = {
   xl: 1200,
@@ -49,6 +51,43 @@ $('.js-popup').on('click', function (event) {
 
   mfpPopup(popupID);
 });
+// setTimeout(() => {
+//   console.log($('#footer').offset().top);
+// }, 1000);
+
+$(document).on('scroll', (e) => {});
+
+// $('.js-scroll').on('click', function (e) {
+//   e.preventDefault();
+//   const id = $(this).attr('href');
+//   console.log(id);
+//   // const el = $(`[data-id=${attr}]`);
+//   const el = $(id);
+//   console.log(el);
+
+//   if (el.length) {
+//     const position = el.offset().top;
+//     console.log(position);
+//     $('html').animate({ scrollTop: position }, 700);
+//   }
+// });
+
+const jsCustomScroll = (element) => {
+  scrollToElement(element, {
+    offset: 0,
+    ease: 'linear',
+    duration: 100,
+  });
+};
+
+const scrollToSection = () => {
+  $('.js-scroll').on('click', function (e) {
+    const id = $(this).attr('href');
+    jsCustomScroll(id);
+  });
+};
+
+scrollToSection();
 
 // Mobile menu toggle
 $('.js-menu').on('click', function () {
