@@ -79,6 +79,7 @@
     flex-direction: column
     justify-content: center
     align-items: center
+
     h5
       color: $c4
       font-family: $deff
@@ -102,15 +103,22 @@
     +xxxl
       flex-wrap: wrap
   &__txt-img-wrap
-    max-width: 480px
-    width: 100%
     display: flex
     align-items: center
+    justify-content: center
+    max-width: 480px
+    width: 100%
     background-color: $c3
     img
       width: 240px
       +lg
         width: 208px
+      +sm
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 150px
+
 
   &__txt
     padding-left: 20px

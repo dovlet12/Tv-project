@@ -75,6 +75,10 @@
 
   &__comment-wrap
     margin-bottom: 30px
+    +md
+      display: flex
+      justify-content: center
+      align-items: center
     textarea
       background-color: $c2
       border: none
@@ -86,6 +90,11 @@
       line-height: 24px
       text-align: left
       color: $c3
+      padding-bottom: 10px
+      +md
+        width: 320px
+      +sm
+        width: 300px
   &__btn-checkbox-wrap
     display: flex
     gap: 50px
@@ -234,15 +243,16 @@
     &:hover
       border-color: $c3
       color: white
-      background-color: $c0
+      background-color: $c2
 
   &__icons
     display: flex
     align-items: center
     justify-content: space-between
     +md
-      gap: 20px
+      gap: 30px
       flex-direction: column
+      padding-bottom: 25px
 
   &__icon-links
     display: flex
@@ -257,6 +267,7 @@
       flex-direction: column
       justify-content: center
       align-items: center
+      padding-bottom: 20px
     span
       color: gray
       font-family: Raleway
