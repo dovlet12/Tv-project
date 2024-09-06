@@ -144,11 +144,13 @@ const swiper = new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
+    clickable: true,
   },
   effect: 'fade',
   autoplay: {
     delay: 5000,
   },
+  setWrapperSize: true,
 });
 
 // $('.hamburger').on('click', function () {
