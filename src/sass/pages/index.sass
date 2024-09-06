@@ -1,12 +1,17 @@
 .main-section
-  min-height: calc( 100vh - 72px )
-  width: 100%
-  object-fit: cover  
-  height: 100%
+  height: calc(100vh - 72px)
+  // width: 100%
+  // object-fit: cover  
+  // height: 100%
   +xl
     min-height: 0
+  +lg
+    height: auto
   
   &__img-wrap
+    height: 100%
+    +lg
+      height: 450px
     img
       width: 100%
       height: 100%
@@ -17,14 +22,15 @@
     top: 150px
     left: 50%
     z-index: 5
-    transform: translate(calc( 50% - 280px ))
+    transform: translate(calc( -50% + 340px ))
     +xxl
-      left: 800px
+      transform: translate(calc( -50% + 220px ))
     +xl
       top: 100px 
-      left: 500px
     +lg
       top: 50px
+      transform: translate(-50%)
+      text-align: center
 
     h2
       color: $c3
@@ -47,8 +53,11 @@
       span
         display: block
 
+  .swiper 
+    height: inherit
   .swiper-slide
     position: relative
+    // height: inherit
     // img
     //   height: 100%
     //   width: 100%
@@ -104,7 +113,7 @@
         transition: all 0.3s ease
         opacity: 0
         visibility: hidden
-        animation: spin 0.75s linear infinite
+        animation: spin 5s linear infinite
         +md
           height: 20px
           width: 20px
@@ -121,6 +130,5 @@
 @keyframes spin
   0%
     transform: translate(-50%, -50%)
-
   100%
     transform: translate(-50%, -50%) rotate(360deg)
