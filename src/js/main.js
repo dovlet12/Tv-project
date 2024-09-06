@@ -150,7 +150,7 @@ const swiper = new Swiper('.swiper', {
   autoplay: {
     delay: 5000,
   },
-  setWrapperSize: true,
+  setWrapperSize: false,
 });
 
 // $('.hamburger').on('click', function () {
